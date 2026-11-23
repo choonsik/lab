@@ -48,16 +48,6 @@
   };
 
   function resolveInitialTheme() {
-    const params = new URLSearchParams(window.location.search);
-    const fromUrl = params.get("theme");
-    if (THEMES.includes(fromUrl)) return fromUrl;
-
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (THEMES.includes(saved)) return saved;
-    } catch (_) {
-      // Ignore storage errors in restricted contexts
-    }
     return "gallery";
   }
 
@@ -512,9 +502,6 @@
       const inInput = tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
       if (inInput) return;
 
-      if (e.key === "1") applyTheme("gallery");
-      if (e.key === "2") applyTheme("notebook");
-      if (e.key === "3") applyTheme("terminal");
       if (e.key === "/") {
         e.preventDefault();
         els.searchInput.focus();
