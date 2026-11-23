@@ -776,10 +776,9 @@ select:focus-visible {
   margin-top: auto;
   padding-top: 14px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
-  flex-wrap: wrap;
 }
 
 [data-theme="gallery"] .card-category {

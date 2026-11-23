@@ -1,5 +1,5 @@
 (() => {
-  const THEMES = ["notebook", "terminal", "gallery"];
+  const THEMES = ["gallery", "notebook", "terminal"];
   const STORAGE_KEY = "choonsik-lab-theme";
 
   const STATUS_LABEL = {
@@ -15,7 +15,7 @@
     category: "전체",
     query: "",
     sort: "newest",
-    theme: "notebook",
+    theme: "gallery",
   };
 
   const els = {
@@ -58,7 +58,7 @@
     } catch (_) {
       // Ignore storage errors in restricted contexts
     }
-    return "notebook";
+    return "gallery";
   }
 
   function applyTheme(theme, persist = true) {
@@ -425,9 +425,9 @@
       const inInput = tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
       if (inInput) return;
 
-      if (e.key === "1") applyTheme("notebook");
-      if (e.key === "2") applyTheme("terminal");
-      if (e.key === "3") applyTheme("gallery");
+      if (e.key === "1") applyTheme("gallery");
+      if (e.key === "2") applyTheme("notebook");
+      if (e.key === "3") applyTheme("terminal");
       if (e.key === "/") {
         e.preventDefault();
         els.searchInput.focus();
