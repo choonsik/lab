@@ -96,6 +96,24 @@
       "visual": "book",
       "thumbnail": "",
       "notes": "카카오 브런치북 시즌 1(12화) 완간, 33개 기수·407인 도감, 54개 페이지 VitePress 웹진 및 4종의 전용 에이전트 스킬 구축."
+    },
+    {
+      "id": "006",
+      "slug": "catdang",
+      "title": "캣당 (CatDang) — 온라인 고양이 평화 공원",
+      "summary": "고양이가 되어 4개 테마 공간을 산책하고 캣타워에 올라 쉬어가는 무료 앰비언트 힐링 웹 메타버스.",
+      "why": "일하거나 공부할 때 브라우저 한쪽에 조용히 켜두는 '산사라이크' 힐링 공간을 고양이 테마와 경량 3D 웹 기술로 직접 만들어 보고 싶었습니다.",
+      "category": "게임",
+      "status": "live",
+      "date": "2026-10-31",
+      "stack": ["Three.js", "Web Audio", "JavaScript", "GitHub Pages"],
+      "links": {
+        "live": "https://choonsik.github.io/catdang/",
+        "repo": "https://github.com/choonsik/catdang"
+      },
+      "visual": "cat",
+      "thumbnail": "",
+      "notes": "평화 공원·레트로 도트 마을·하늘 고양이·포근 다락방 찻집 4개 월드와 스페이스바 점프 물리, 3D 캣타워 등반 시스템 지원."
     }
   ]
 }

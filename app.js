@@ -201,6 +201,44 @@
             </g>
             <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#7c4d46">${label} · BRUNCHBOOK &amp; WEBZINE</text>
           </svg>`;
+      case "cat":
+        return `
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="캣당 고양이 공원 일러스트">
+            <rect width="480" height="300" fill="#eef5ed" />
+            <!-- Soft hills -->
+            <ellipse cx="140" cy="285" rx="220" ry="90" fill="#d8ead6" />
+            <ellipse cx="360" cy="292" rx="210" ry="86" fill="#c7e1c4" />
+            <!-- Clouds -->
+            <g fill="#ffffff" opacity="0.9">
+              <rect x="82" y="64" width="66" height="18" rx="9" />
+              <circle cx="104" cy="64" r="12" />
+              <circle cx="124" cy="66" r="10" />
+              <rect x="332" y="76" width="58" height="16" rx="8" />
+              <circle cx="352" cy="76" r="10" />
+              <circle cx="370" cy="78" r="9" />
+            </g>
+            <!-- Cat Tower Platform -->
+            <rect x="192" y="198" width="96" height="10" rx="5" fill="#b08968" />
+            <rect x="234" y="208" width="12" height="58" fill="#9c7556" />
+            <!-- Sitting Cat Silhouette -->
+            <g transform="translate(208, 126)">
+              <!-- Tail -->
+              <path d="M54 68 C74 68 78 46 66 40" fill="none" stroke="#3d405b" stroke-width="6" stroke-linecap="round" />
+              <!-- Body -->
+              <ellipse cx="32" cy="52" rx="24" ry="22" fill="#3d405b" />
+              <!-- Head -->
+              <circle cx="32" cy="24" r="16" fill="#3d405b" />
+              <!-- Ears -->
+              <polygon points="18,16 20,2 30,11" fill="#3d405b" />
+              <polygon points="46,16 44,2 34,11" fill="#3d405b" />
+              <!-- Eyes -->
+              <circle cx="26" cy="23" r="2" fill="#f4f1de" />
+              <circle cx="38" cy="23" r="2" fill="#f4f1de" />
+              <!-- Nose -->
+              <polygon points="30,27 34,27 32,29.5" fill="#f2a694" />
+            </g>
+            <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3d5a45">${label} · CATDANG PARK</text>
+          </svg>`;
       default:
         return `
           <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="실험 기본 일러스트">
