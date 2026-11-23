@@ -60,6 +60,24 @@
       "visual": "helicopter",
       "thumbnail": "",
       "notes": "별도 설치 없이 브라우저에서 바로 플레이 가능."
+    },
+    {
+      "id": "004",
+      "slug": "gdrive-shared-folder-migrator",
+      "title": "Google Drive 공유 폴더 소유권 이전 도구",
+      "summary": "구글 드라이브 공유 폴더의 파일 소유권 이전과 중복 정리를 1-Pass 무인 자동화로 처리하는 Google Apps Script 도구.",
+      "why": "타인이 공유해 준 대용량 폴더의 파일을 내 계정 소유로 안전하게 옮기면서, 실행 시간 제한(타임아웃)과 중복 파일 문제까지 한 번에 해결하고 싶었습니다.",
+      "category": "자동화",
+      "status": "local",
+      "date": "2026-10-17",
+      "stack": ["Google Apps Script", "Drive API v3", "JavaScript"],
+      "links": {
+        "live": "",
+        "repo": "https://github.com/choonsik/gdrive-shared-folder-migrator"
+      },
+      "visual": "migration",
+      "thumbnail": "",
+      "notes": "Drive API v3 하이브리드 엔진, 타임아웃 이어하기(Auto-Pilot), Dry-Run 시뮬레이션, 듀얼 페인 웹앱(gas-webapp) 포함."
     }
   ]
 }

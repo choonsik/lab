@@ -152,6 +152,32 @@
             </g>
             <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#0f5f59">${label} · CITY FLIGHT</text>
           </svg>`;
+      case "migration":
+        return `
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="구글 드라이브 폴더 마이그레이션 일러스트">
+            <rect width="480" height="300" fill="#edf3f8" />
+            <!-- Source Folder -->
+            <g transform="translate(68, 102)">
+              <path d="M0 16 C0 10 5 6 11 6 H50 L62 18 H118 C124 18 128 22 128 28 V96 C128 102 124 106 118 106 H11 C5 106 0 102 0 96 Z" fill="#ffffff" stroke="#64748b" stroke-width="2" />
+              <line x1="20" y1="46" x2="96" y2="46" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+              <line x1="20" y1="64" x2="78" y2="64" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+              <line x1="20" y1="82" x2="88" y2="82" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+            </g>
+            <!-- Transfer Flow -->
+            <g stroke="#0f766e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="212" y1="158" x2="266" y2="158" stroke-dasharray="5 5" />
+              <polyline points="256,149 268,158 256,167" />
+            </g>
+            <!-- Target Folder -->
+            <g transform="translate(284, 102)">
+              <path d="M0 16 C0 10 5 6 11 6 H50 L62 18 H118 C124 18 128 22 128 28 V96 C128 102 124 106 118 106 H11 C5 106 0 102 0 96 Z" fill="#e6f4f1" stroke="#0f766e" stroke-width="2.2" />
+              <circle cx="96" cy="76" r="16" fill="#0f766e" />
+              <polyline points="89,76 94,81 104,71" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="20" y1="46" x2="82" y2="46" stroke="#5ea8a1" stroke-width="3" stroke-linecap="round" />
+              <line x1="20" y1="64" x2="66" y2="64" stroke="#5ea8a1" stroke-width="3" stroke-linecap="round" />
+            </g>
+            <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#334155">${label} · DRIVE MIGRATOR</text>
+          </svg>`;
       default:
         return `
           <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="실험 기본 일러스트">
