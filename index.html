@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="notebook">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choonsik Lab — 작은 실험들의 기록</title>
+  <meta name="description" content="코딩 에이전트와 함께 하루에 하나씩 쌓아가는 개인 실험실과 프로젝트 아카이브" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="header-top">
+        <a href="./" class="brand" aria-label="Choonsik Lab 홈">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name" id="lab-title">Choonsik Lab</span>
+        </a>
+
+        <div class="header-controls">
+          <div class="theme-switcher" role="group" aria-label="페이지 분위기 선택">
+            <button type="button" class="theme-btn" data-set-theme="notebook" aria-pressed="true" title="단축키 1">
+              <span class="theme-key">1</span>노트
+            </button>
+            <button type="button" class="theme-btn" data-set-theme="terminal" aria-pressed="false" title="단축키 2">
+              <span class="theme-key">2</span>터미널
+            </button>
+            <button type="button" class="theme-btn" data-set-theme="gallery" aria-pressed="false" title="단축키 3">
+              <span class="theme-key">3</span>갤러리
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="terminal-prompt" aria-hidden="true">
+          <span class="prompt-user">choonsik@lab</span><span class="prompt-sep">:</span><span class="prompt-path">~/experiments</span><span class="prompt-dollar">$</span>
+          <span class="prompt-cmd">ls --sort=recent</span>
+        </div>
+        <h1 class="hero-title" id="hero-heading">만들면서 배우는 개인 실험실</h1>
+        <p class="hero-subtitle" id="lab-subtitle">코딩 에이전트와 함께 하루에 하나씩 쌓아가는 작은 실험들</p>
+
+        <div class="lab-stats" id="lab-stats" aria-label="실험실 요약">
+          <!-- JS로 렌더링 -->
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="toolbar" aria-label="실험 필터 및 검색">
+        <div class="filter-bar" id="category-filters" role="tablist" aria-label="카테고리 필터">
+          <!-- JS로 렌더링 -->
+        </div>
+
+        <div class="toolbar-right">
+          <label class="search-box" aria-label="실험 검색">
+            <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.6" />
+              <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <input type="search" id="search-input" placeholder="제목, 태그, 설명 검색 ( / )" autocomplete="off" />
+          </label>
+
+          <select id="sort-select" class="sort-select" aria-label="정렬 방식">
+            <option value="newest">최신순</option>
+            <option value="oldest">번호순</option>
+          </select>
+
+          <button type="button" id="random-btn" class="action-ghost" title="무작위 실험 하나 열어보기">
+            랜덤 실험
+          </button>
+        </div>
+      </section>
+
+      <div class="terminal-table-head" aria-hidden="true">
+        <span>ID</span>
+        <span>실험</span>
+        <span>분류</span>
+        <span>상태</span>
+        <span>날짜</span>
+        <span>링크</span>
+      </div>
+
+      <section id="project-list" class="project-list" aria-live="polite">
+        <!-- JS로 렌더링 -->
+      </section>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <p class="empty-title">조건에 맞는 실험이 없습니다.</p>
+        <p class="empty-desc">검색어를 지우거나 카테고리를 전체로 되돌려 보세요.</p>
+        <button type="button" id="reset-filter-btn" class="action-ghost">필터 초기화</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span id="footer-copy">choonsik / lab</span>
+        <span class="footer-hint">키보드 <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> 으로 분위기 전환</span>
+      </div>
+      <div class="footer-links">
+        <a id="footer-repo" href="https://github.com/choonsik/lab" target="_blank" rel="noopener noreferrer">Lab 저장소</a>
+        <a id="footer-github" href="https://github.com/choonsik" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 상세 보기 모달 -->
+  <div id="detail-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-meta" id="modal-meta"></div>
+        <button type="button" class="modal-close" id="modal-close" aria-label="닫기">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-visual" id="modal-visual"></div>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-summary" id="modal-summary"></p>
+
+        <div class="modal-section" id="modal-why-wrap">
+          <h3 class="modal-label">왜 만들었나</h3>
+          <p class="modal-text" id="modal-why"></p>
+        </div>
+
+        <div class="modal-section" id="modal-notes-wrap">
+          <h3 class="modal-label">실험 메모</h3>
+          <p class="modal-text" id="modal-notes"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-label">사용 기술</h3>
+          <div class="modal-tags" id="modal-stack"></div>
+        </div>
+      </div>
+      <div class="modal-footer" id="modal-actions"></div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

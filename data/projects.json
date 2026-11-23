@@ -1,0 +1,65 @@
+{
+  "lab": {
+    "title": "Choonsik Lab",
+    "subtitle": "코딩 에이전트와 함께 하루에 하나씩 쌓아가는 작은 실험들",
+    "author": "choonsik",
+    "github": "https://github.com/choonsik",
+    "repo": "https://github.com/choonsik/lab"
+  },
+  "projects": [
+    {
+      "id": "001",
+      "slug": "til",
+      "title": "TIL — AI 시대 학습하는 방법",
+      "summary": "너무 많은 정보와 흩어진 생각을 오늘 배운 기록(TIL)으로 체계화하는 학습 실험.",
+      "why": "AI로 정보를 얻는 속도는 빨라졌지만 내 것으로 남기는 구조가 필요해서, 꾸준히 기록하고 다시 꺼내 볼 수 있는 개인 학습 아카이브를 만들었습니다.",
+      "category": "지식",
+      "status": "live",
+      "date": "2026-10-28",
+      "stack": ["JavaScript", "Markdown", "GitHub Pages"],
+      "links": {
+        "live": "https://choonsik.github.io/TIL/",
+        "repo": "https://github.com/choonsik/TIL"
+      },
+      "visual": "knowledge",
+      "thumbnail": "",
+      "notes": "흩어진 메모를 정해진 포맷으로 축적하고 웹에서 바로 탐색할 수 있게 구성."
+    },
+    {
+      "id": "002",
+      "slug": "mininas",
+      "title": "MiniNAS — 가벼운 로컬 나스",
+      "summary": "복잡한 설정 없이 내 장비에서 가볍게 띄워 쓰는 미니멀 로컬 NAS 도구.",
+      "why": "거대한 홈 서버 솔루션 대신, 로컬 네트워크에서 필요한 파일만 빠르고 단순하게 공유·관리할 수 있는 가벼운 나스가 필요해 만들었습니다.",
+      "category": "로컬 도구",
+      "status": "local",
+      "date": "2026-11-07",
+      "stack": ["TypeScript", "Local Server"],
+      "links": {
+        "live": "",
+        "repo": "https://github.com/choonsik/mininas"
+      },
+      "visual": "nas",
+      "thumbnail": "",
+      "notes": "웹 배포 대신 로컬 환경에서 직접 실행하는 셀프호스팅 유틸리티."
+    },
+    {
+      "id": "003",
+      "slug": "city-helicopter",
+      "title": "도심을 날아다니는 헬리콥터 게임",
+      "summary": "빌딩 숲 사이를 누비며 조종하는 브라우저 기반 헬리콥터 아케이드 게임.",
+      "why": "코딩 에이전트와 인터랙티브한 3D/웹 게임을 어디까지 빠르게 만들 수 있는지 실험해보고 싶었습니다.",
+      "category": "게임",
+      "status": "live",
+      "date": "2026-11-18",
+      "stack": ["TypeScript", "Web Game", "GitHub Pages"],
+      "links": {
+        "live": "https://choonsik.github.io/game/",
+        "repo": "https://github.com/choonsik/game"
+      },
+      "visual": "helicopter",
+      "thumbnail": "",
+      "notes": "별도 설치 없이 브라우저에서 바로 플레이 가능."
+    }
+  ]
+}
