@@ -178,6 +178,29 @@
             </g>
             <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#334155">${label} · DRIVE MIGRATOR</text>
           </svg>`;
+      case "book":
+        return `
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="브런치북 및 웹진 일러스트">
+            <rect width="480" height="300" fill="#f7f1ee" />
+            <!-- Open Book -->
+            <g transform="translate(106, 76)">
+              <path d="M134 18 C108 6 54 4 10 14 V156 C54 146 108 148 134 162 Z" fill="#ffffff" stroke="#8c5a52" stroke-width="2" stroke-linejoin="round" />
+              <path d="M134 18 C160 6 214 4 258 14 V156 C214 146 160 148 134 162 Z" fill="#fffaf8" stroke="#8c5a52" stroke-width="2" stroke-linejoin="round" />
+              <!-- Left page lines -->
+              <line x1="34" y1="48" x2="112" y2="48" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="34" y1="68" x2="106" y2="68" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="34" y1="88" x2="114" y2="88" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="34" y1="108" x2="90" y2="108" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <!-- Right page emblem & lines -->
+              <circle cx="196" cy="64" r="18" fill="#f2dfd9" stroke="#b35c50" stroke-width="1.8" />
+              <circle cx="204" cy="64" r="10" fill="none" stroke="#b35c50" stroke-width="1.6" />
+              <line x1="158" y1="104" x2="234" y2="104" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="158" y1="122" x2="220" y2="122" stroke="#d8c3bc" stroke-width="2.5" stroke-linecap="round" />
+              <!-- Bookmark ribbon -->
+              <path d="M134 18 V178 L127 170 L120 178 V158" fill="#b35c50" />
+            </g>
+            <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="13" fill="#7c4d46">${label} · BRUNCHBOOK &amp; WEBZINE</text>
+          </svg>`;
       default:
         return `
           <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="실험 기본 일러스트">
